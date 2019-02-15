@@ -12,7 +12,6 @@ export default class PostPreview extends React.Component {
       <div
         className="content"
         style={{ border: '1px solid #333', padding: '2em 4em' }}
-        // key={post.id}
       >
         <p>
           <Link className="has-text-primary" to={post.fields.slug}>
