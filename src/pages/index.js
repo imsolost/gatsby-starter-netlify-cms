@@ -9,6 +9,10 @@ export default class IndexPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
+    const postPreviews = posts.map(({ node: post }) => { 
+        return (
+          <PostPreview post={post} key={post.id} />
+      )})
 
     return (
       <Layout>
@@ -17,11 +21,7 @@ export default class IndexPage extends React.Component {
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
             </div>
-            {posts
-              .map(({ node: post }) => { 
-                return (
-                  <PostPreview post={post} key={post.id} />
-              )})}
+            {postPreviews}
           </div>
         </section>
       </Layout>

@@ -1,5 +1,4 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 export default class PostPreview extends React.Component {
