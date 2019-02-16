@@ -18,10 +18,10 @@
 //           >
 //             <h1 className="title is-size-2 is-bold-light">Authors</h1>
 //             <ul className="taglist">
-//               {group.map(tag => (
-//                 <li key={tag.fieldValue}>
-//                   <Link to={`/Authors/${kebabCase(tag.fieldValue)}/`}>
-//                     {tag.fieldValue} ({tag.totalCount})
+//               {group.map(author => (
+//                 <li key={author.fieldValue}>
+//                   <Link to={`/Authors/${kebabCase(author.fieldValue)}/`}>
+//                     {tag.fieldValue} ({author.totalCount})
 //                   </Link>
 //                 </li>
 //               ))}
@@ -43,7 +43,7 @@
 //       }
 //     }
 //     allMarkdownRemark(limit: 1000) {
-//       group(field: frontmatter___authors) {
+//       group(field: frontmatter___author) {
 //         fieldValue
 //         totalCount
 //       }

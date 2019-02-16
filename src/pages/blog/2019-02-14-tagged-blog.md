@@ -1,6 +1,7 @@
 ---
 templateKey: blog-post
 title: Tagged blog
+author: Ryan K
 date: 2019-02-14T22:37:28.101Z
 description: This blog has a tag
 tags:
