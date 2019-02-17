@@ -8,12 +8,12 @@ export default class AuthorPage extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    const tag = this.props.pageContext.tag
+    const author = this.props.pageContext.author
     const title = this.props.data.site.siteMetadata.title
     const totalCount = this.props.data.allMarkdownRemark.totalCount
     const authorHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
-    } written by “${tag}”`
+    } written by ${author}`
     const postPreviews = posts.map(({ node: post }) => { 
         return (
           <PostPreview post={post} key={post.id} />
@@ -30,7 +30,6 @@ export default class AuthorPage extends React.Component {
                 style={{ marginBottom: '6rem' }}
               >
                 <h3 className="title is-size-4 is-bold-light">{authorHeader}</h3>
-                {/* <ul className="taglist">{postLinks}</ul> */}
                 {postPreviews}
                 <p>
                   <Link to="/tags/">Browse all authors</Link>

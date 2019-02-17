@@ -6,6 +6,7 @@ export default class PostPreview extends React.Component {
   render() {
     const post = this.props.post
     const tags = post.frontmatter.tags
+    const author = post.frontmatter.author.replace(' ', '-').toLowerCase()
 
     return (
       <div
@@ -17,7 +18,9 @@ export default class PostPreview extends React.Component {
             {post.frontmatter.title}
           </Link>
           <span> &bull; </span>
-          <small>{post.frontmatter.author}</small>
+          <Link to={`/authors/${author}`}>
+            {post.frontmatter.author}
+          </Link>
           <span> &bull; </span>
           <small>{post.frontmatter.date}</small>
         </p>

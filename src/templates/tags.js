@@ -30,7 +30,6 @@ export default class TagRoute extends React.Component {
                 style={{ marginBottom: '6rem' }}
               >
                 <h3 className="title is-size-4 is-bold-light">{tagHeader}</h3>
-                {/* <ul className="taglist">{postLinks}</ul> */}
                 {postPreviews}
                 <p>
                   <Link to="/tags/">Browse all tags</Link>
