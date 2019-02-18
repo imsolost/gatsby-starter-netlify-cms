@@ -3,6 +3,7 @@ import Helmet from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostPreview from '../components/PostPreview'
+import profileImage from '../img/profile-blank.jpg'
 
 export default class AuthorPage extends React.Component {
   render() {
@@ -29,6 +30,15 @@ export default class AuthorPage extends React.Component {
                 className="column is-10 is-offset-1"
                 style={{ marginBottom: '6rem' }}
               >
+                <h1 className="has-text-weight-bold is-size-2">{author}</h1>
+                <div className="profile-box"> 
+                  <img src={profileImage} style={{width: 150}}/>
+                  <br></br>
+                  This person writes lots of blog posts with lots of pertinent information.
+                  The like to write in their freetime.
+                  Most of what they write is gibberish.
+                  If we had a better profile image of this user, we would utilize is here.
+                </div>
                 <h3 className="title is-size-4 is-bold-light">{authorHeader}</h3>
                 {postPreviews}
                 <p>
