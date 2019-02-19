@@ -32,7 +32,7 @@ export default class AuthorPage extends React.Component {
               >
                 <h1 className="has-text-weight-bold is-size-2">{author}</h1>
                 <div className="profile-box"> 
-                  <img src={profileImage} style={{width: 150}}/>
+                  <img src={profileImage} style={{width: 150}} alt="profile"/>
                   <br></br>
                   This person writes lots of blog posts with lots of pertinent information.
                   The like to write in their freetime.

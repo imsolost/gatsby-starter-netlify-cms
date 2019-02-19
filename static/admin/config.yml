@@ -14,11 +14,24 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Author", name: "author", widget: "relation", collection: "author", searchFields: ["id"], valueField: "id"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+
+  - name: "author"
+    label: "Author"
+    folder: "src/pages/author"
+    extension: "yaml"
+    create: true
+    identifier_field: id
+    slug: "{{slug}}"
+    fields:
+      - {label: "Fullname", name: "id", widget: "string"}
+      - {label: "Avatar", name: "avatar", widget: "image", required: false}
+      - {label: "Organization", name: "organization", widget: "string", required: false}
+      - {label: "Job position (title)", name: "jobTitle", widget: "string", required: false}
 
   - name: "pages"
     label: "Pages"
