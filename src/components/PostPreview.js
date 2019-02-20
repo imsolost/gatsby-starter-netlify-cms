@@ -33,7 +33,7 @@ export default class PostPreview extends React.Component {
           </Link>
           <br />
           <br />
-          {tags ? tags.map((tag, i) => {
+          Tags: {tags ? tags.map((tag, i) => {
             const URLtag = tag.replace(' ', '-')
             return (
               <span key={i}> 
