@@ -22,9 +22,9 @@ export default class Navbar extends React.Component {
           <Link className="navbar-item" to="/contact">
             Contact
           </Link>
-          <Link className="navbar-item" to="/contact/examples">
+          {/* <Link className="navbar-item" to="/contact/examples">
             Form Examples
-          </Link>
+          </Link> */}
         </div>
         <div className="navbar-end has-text-centered">
           <a
