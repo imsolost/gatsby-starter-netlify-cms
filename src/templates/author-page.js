@@ -31,14 +31,14 @@ export default class AuthorPage extends React.Component {
                 style={{ marginBottom: '6rem' }}
               >
                 <h1 className="has-text-weight-bold is-size-2">{author}</h1>
-                <div className="profile-box"> 
+                {/* <div className="profile-box"> 
                   <img src={profileImage} style={{width: 150}} alt="profile"/>
                   <br></br>
                   This person writes lots of blog posts with lots of pertinent information.
                   The like to write in their freetime.
                   Most of what they write is gibberish.
                   If we had a better profile image of this user, we would utilize is here.
-                </div>
+                </div> */}
                 <h3 className="title is-size-4 is-bold-light">{authorHeader}</h3>
                 {postPreviews}
                 <p>
