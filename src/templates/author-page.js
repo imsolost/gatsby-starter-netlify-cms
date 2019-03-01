@@ -42,7 +42,7 @@ export default class AuthorPage extends React.Component {
                 <h3 className="title is-size-4 is-bold-light">{authorHeader}</h3>
                 {postPreviews}
                 <p>
-                  <Link to="/tags/">Browse all authors</Link>
+                  <Link to="/authors/">Browse all authors</Link>
                 </p>
               </div>
             </div>
