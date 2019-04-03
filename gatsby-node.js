@@ -18,7 +18,7 @@ exports.createPages = ({ actions, graphql }) => {
             frontmatter {
               author
               tags
-              templateKey
+              template
             }
           }
         }
@@ -39,7 +39,7 @@ exports.createPages = ({ actions, graphql }) => {
         author: edge.node.frontmatter.author,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
+          `src/templates/${String(edge.node.frontmatter.template)}.js`
         ),
         // additional data can be passed via context
         context: {
